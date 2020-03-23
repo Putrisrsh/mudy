@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ChooseGender">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="191dp"
+            android:layout_marginTop="530dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="169dp"
+            android:background="@drawable/custom_button"
+            android:text="Female"
+            android:onClick="toHobbies"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="530dp"
+            android:layout_marginEnd="195dp"
+            android:layout_marginBottom="168dp"
+            android:background="@drawable/custom_button"
+            android:text="Male"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="193dp"
+            android:layout_marginBottom="182dp"
+            app:srcCompat="@drawable/male" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="414dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="193dp"
+            android:layout_marginTop="151dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="166dp"
+            app:srcCompat="@drawable/female" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a6c1ee"
+    tools:context=".Hobbies">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="-21dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="61dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="112dp"
+                android:layout_height="106dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="223dp"
+                android:layout_marginEnd="232dp"
+                android:layout_marginBottom="306dp"
+                app:srcCompat="@drawable/belajar" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="221dp"
+                android:layout_marginEnd="121dp"
+                android:layout_marginBottom="308dp"
+                app:srcCompat="@drawable/sport" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="114dp"
+                android:layout_height="104dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="502dp"
+                android:layout_marginEnd="117dp"
+                android:layout_marginBottom="27dp"
+                app:srcCompat="@drawable/bersepeda" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="138dp"
+                android:layout_height="162dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="223dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="306dp"
+                app:srcCompat="@drawable/playingpet" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="502dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="27dp"
+                app:srcCompat="@drawable/playingmusic" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="136dp"
+                android:layout_height="163dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="235dp"
+                android:layout_marginTop="360dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="168dp"
+                app:srcCompat="@drawable/playinggame" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="361dp"
+                android:layout_marginEnd="231dp"
+                android:layout_marginBottom="168dp"
+                app:srcCompat="@drawable/jogging" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="114dp"
+                android:layout_marginTop="361dp"
+                android:layout_marginEnd="119dp"
+                android:layout_marginBottom="168dp"
+                app:srcCompat="@drawable/memasak" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="500dp"
+                android:layout_marginEnd="233dp"
+                android:layout_marginBottom="29dp"
+                app:srcCompat="@drawable/memancing" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
