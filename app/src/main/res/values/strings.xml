@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyApp</string>
+    <string name="title_activity_profile">profile</string>
+    <string name="title_timeline">Timeline</string>
+    <string name="title_notes">Notes</string>
+    <string name="title_profile">Profile</string>
 </resources>
