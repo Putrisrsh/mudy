@@ -3,4 +3,8 @@
     <string name="your_characteristics">Your Characteristics</string>
     <string name="character_name">nama karakter</string>
     <string name="character_detail">detail karakter</string>
+    <string name="title_activity_profile">profile</string>
+    <string name="title_timeline">Timeline</string>
+    <string name="title_notes">Notes</string>
+    <string name="title_profile">Profile</string>
 </resources>
