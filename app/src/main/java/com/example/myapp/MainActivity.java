@@ -13,8 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+
+import java.security.Principal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,18 +46,14 @@ public class MainActivity extends AppCompatActivity {
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    User currentUser = sqliteHelper.Authenticate(new User(null, null, null, Email, Password));
-
+                    User currentUser = sqliteHelper.Authenticate(new User(null, null, null, null, Email, Password));
                     if (currentUser != null) {
-                        Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
-
-                        Intent intent=new Intent(MainActivity.this,Hobbies.class);
+                        Intent intent=new Intent(MainActivity.this, Profile.class);
                         startActivity(intent);
+                        Toast.makeText(MainActivity.this, "Successfully Logged In!", Toast.LENGTH_SHORT).show();
                         finish();
-
                     } else {
-                        Snackbar.make(buttonLogin, "Failed to log in , please try again.", Snackbar.LENGTH_LONG).show();
-
+                        Toast.makeText(MainActivity.this, "Failed to log in. Please try again.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -76,16 +75,6 @@ public class MainActivity extends AppCompatActivity {
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
-    }
-
-    public static Spanned fromHtml(String html) {
-        Spanned result;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        } else {
-            result = Html.fromHtml(html);
-        }
-        return result;
     }
 
     public boolean validate() {

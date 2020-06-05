@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -18,6 +19,7 @@ public class Register extends AppCompatActivity {
     EditText editTextName;
     EditText editTextEmail;
     EditText editTextPassword;
+    EditText editTextPhoneNumber;
     Button buttonRegister;
 
     SqliteHelper sqliteHelper;
@@ -37,11 +39,12 @@ public class Register extends AppCompatActivity {
                     String Name = editTextName.getText().toString();
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
+                    String PhoneNumber = editTextPhoneNumber.getText().toString();
 
                     if (!sqliteHelper.isEmailExists(Email)) {
 
-                        sqliteHelper.addUser(new User(null, UserName, Name, Email, Password));
-                        Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
+                        sqliteHelper.addUser(new User(null, UserName, Name, Email, Password, PhoneNumber));
+                        Toast.makeText(Register.this, "User created successfully! Please Sign In.", Toast.LENGTH_SHORT).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -49,9 +52,7 @@ public class Register extends AppCompatActivity {
                             }
                         }, Snackbar.LENGTH_LONG);
                     }else {
-
-                        //Email exists with email input provided so show error user already exist
-                        Snackbar.make(buttonRegister, "User already exists with same email ", Snackbar.LENGTH_LONG).show();
+                        Toast.makeText(Register.this, "User already exist with same email", Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -77,7 +78,7 @@ public class Register extends AppCompatActivity {
         editTextUserName = (EditText) findViewById(R.id.editTextUsername);
         editTextName = (EditText) findViewById(R.id.editTextName);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
-
+        editTextPhoneNumber = (EditText) findViewById(R.id.editTextPhoneNumber);
     }
 
     public boolean validate() {
