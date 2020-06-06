@@ -10,6 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class SqliteHelper  extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "mudy";
@@ -21,6 +23,8 @@ public class SqliteHelper  extends SQLiteOpenHelper {
     public static final String KEY_PHONE_NUMBER = "phonenumber";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PASSWORD = "password";
+
+    ArrayList<String> userData = new ArrayList<String>();
 
     public static final String SQL_TABLE_USERS = " CREATE TABLE " + TABLE_USERS
             + " ( "
@@ -99,4 +103,11 @@ public class SqliteHelper  extends SQLiteOpenHelper {
         //if email does not exist return false
         return false;
     }
+
+    public Cursor getUserData(){
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_USERS, null);
+        return cursor;
+    }
+
 }

@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity {
 
                     if (!sqliteHelper.isEmailExists(Email)) {
 
-                        sqliteHelper.addUser(new User(null, UserName, Name, Email, Password, PhoneNumber));
+                        sqliteHelper.addUser(new User(null, UserName, Name, PhoneNumber, Email, Password));
                         Toast.makeText(Register.this, "User created successfully! Please Sign In.", Toast.LENGTH_SHORT).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override

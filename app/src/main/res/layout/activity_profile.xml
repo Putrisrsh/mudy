@@ -59,10 +59,9 @@
                 android:gravity="center_horizontal">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/namaGede"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Putri Sari A."
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textAlignment="center" />
@@ -76,10 +75,9 @@
                 android:layout_marginLeft="100dp"
                 >
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/usernameAtas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="putrisrsh"
                     android:paddingLeft="10dp"
                     android:paddingTop="25dp" />
                 <TextView
@@ -134,10 +132,9 @@
                     android:paddingTop="20dp"/>
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/isiEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="isi Email"
                     android:textAlignment="viewStart"
                     android:textSize="18sp" />
             </TableRow>
@@ -152,10 +149,9 @@
                     android:paddingTop="20dp"/>
 
                 <TextView
-                    android:id="@+id/username"
+                    android:id="@+id/isiUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="isi username"
                     android:textAlignment="viewStart"
                     android:textSize="18sp" />
             </TableRow>
@@ -170,10 +166,9 @@
                     android:paddingTop="20dp"/>
 
                 <TextView
-                    android:id="@+id/mobile"
+                    android:id="@+id/isiNomer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="isi Nomor"
                     android:textAlignment="viewStart"
                     android:textSize="18sp" />
             </TableRow>
@@ -188,10 +183,9 @@
                     android:paddingTop="20dp"/>
 
                 <TextView
-                    android:id="@+id/gender"
+                    android:id="@+id/isiGender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="isi gender"
                     android:textAlignment="viewStart"
                     android:textSize="18sp" />
             </TableRow>

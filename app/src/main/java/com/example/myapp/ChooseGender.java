@@ -13,7 +13,7 @@ public class ChooseGender extends AppCompatActivity {
     Button buttonFemale;
     Button buttonMale;
 
-    private String gender;
+    String gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,38 +31,37 @@ public class ChooseGender extends AppCompatActivity {
 
     private String isMale(){
         buttonMale.setOnClickListener(new View.OnClickListener() {
+            String gender;
             @Override
             public void onClick(View view) {
                 gender = "Male";
+                this.gender = gender;
                 Intent intent = new Intent(getBaseContext(), Hobbies.class);
                 startActivity(intent);
                 //buat ngetes aja variabelnya bener
-                Toast.makeText(ChooseGender.this, "You are " + gender, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ChooseGender.this, "You are " + this.gender, Toast.LENGTH_SHORT).show();
             }
         });
-        return gender;
+        return this.gender;
     }
 
     private String isFemale(){
         buttonFemale.setOnClickListener(new View.OnClickListener() {
+            String gender;
             @Override
             public void onClick(View view) {
                 gender = "Female";
+                this.gender = gender;
                 Intent intent = new Intent(getBaseContext(), Hobbies.class);
                 startActivity(intent);
-                Toast.makeText(ChooseGender.this, "You are " + gender, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ChooseGender.this, "You are " + this.gender, Toast.LENGTH_SHORT).show();
             }
         });
-        return gender;
+        return this.gender;
     }
 
     public String getGender() {
-        return gender;
+        return this.gender;
     }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
 
 }

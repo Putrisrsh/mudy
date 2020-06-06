@@ -47,8 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     String Password = editTextPassword.getText().toString();
 
                     User currentUser = sqliteHelper.Authenticate(new User(null, null, null, null, Email, Password));
-                    //dibuat == null aja dulu biar bisa jalan, lanjut yg lain dulu
-                    if (currentUser == null) {
+                    if (currentUser != null) {
                         Intent intent = new Intent(MainActivity.this, ChooseGender.class);
                         startActivity(intent);
                         Toast.makeText(MainActivity.this, "Successfully Logged In!", Toast.LENGTH_SHORT).show();
