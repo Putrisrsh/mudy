@@ -54,8 +54,6 @@ public class Register extends AppCompatActivity {
                     }else {
                         Toast.makeText(Register.this, "User already exist with same email", Toast.LENGTH_SHORT).show();
                     }
-
-
                 }
             }
         });

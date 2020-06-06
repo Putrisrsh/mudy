@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/buttonFemale"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:layout_alignParentStart="true"
@@ -30,11 +30,10 @@
             android:layout_marginBottom="169dp"
             android:background="@drawable/custom_button"
             android:text="Female"
-            android:onClick="toHobbies"
             android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/buttonMale"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
             android:layout_alignParentStart="true"

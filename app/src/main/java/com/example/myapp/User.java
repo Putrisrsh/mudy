@@ -12,9 +12,9 @@ public class User {
         this.id = id;
         this.userName = userName;
         this.name = name;
+        this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
-        this.phoneNumber = phoneNumber;
     }
 
 }
