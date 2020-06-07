@@ -6,13 +6,17 @@ import androidx.appcompat.widget.AppCompatImageHelper;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import com.example.myapp.model.characterData;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.myapp.model.character;
+
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Hobbies extends AppCompatActivity {
@@ -31,10 +35,16 @@ public class Hobbies extends AppCompatActivity {
 
     private int minimumChoice = 0;
 
+    public ArrayList<character> characters = new ArrayList<>();
+    public ArrayList<character> getListcharacter(){
+        return characters;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hobbies);
+
         initViews();
 
         buttonStudy();
@@ -47,11 +57,24 @@ public class Hobbies extends AppCompatActivity {
         buttonCook();
         buttonFishing();
 
+        characters.addAll(characterData.getListData());
+
+
+
+
+
+
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (minimumChoice >= 3){
-                    Intent intent = new Intent(getBaseContext(), Profile.class);
+
+                    int randomIndex = (int)(Math.random() * characters.size());
+                    character c = getListcharacter().get(randomIndex);
+                    Intent intent =new Intent(Hobbies.this,characterActivity.class);
+                    intent.putExtra(characterActivity.EXTRA_NAME_C, c.getNama_character());
+                    intent.putExtra(characterActivity.EXTRA_DETAIL_C, c.getDetail_character());
+                    intent.putExtra(characterActivity.EXTRA_IMAGE_C, c.getImage_character());
                     startActivity(intent);
                 } else {
                     Toast.makeText(Hobbies.this, "Pilih minimal 3.", Toast.LENGTH_SHORT).show();
@@ -153,5 +176,7 @@ public class Hobbies extends AppCompatActivity {
             }
         });
     }
+
+
 
 }

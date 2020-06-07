@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    User currentUser = sqliteHelper.Authenticate(new User(null, null, null, null, Email, Password));
+                    User currentUser = sqliteHelper.Authenticate(new User(null,null,null,null, Email, Password));
                     if (currentUser != null) {
                         Intent intent = new Intent(MainActivity.this, ChooseGender.class);
                         startActivity(intent);

@@ -68,8 +68,7 @@ public class SqliteHelper  extends SQLiteOpenHelper {
 
     public User Authenticate(User user) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_USERS,// Selecting Table
-                new String[]{KEY_ID, KEY_USER_NAME, KEY_NAME, KEY_PHONE_NUMBER,  KEY_EMAIL, KEY_PASSWORD},
+        Cursor cursor = db.query(TABLE_USERS, new String[]{KEY_ID, KEY_USER_NAME, KEY_NAME, KEY_PHONE_NUMBER,  KEY_EMAIL, KEY_PASSWORD},
                 KEY_EMAIL + "=?",
                 new String[]{user.email},//Where clause
                 null, null, null);

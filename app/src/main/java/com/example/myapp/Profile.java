@@ -84,4 +84,6 @@ public class Profile extends AppCompatActivity {
 
         Toast.makeText(getBaseContext(), "GENDER NYA " + jk, Toast.LENGTH_SHORT).show();
     }
+
+
 }
