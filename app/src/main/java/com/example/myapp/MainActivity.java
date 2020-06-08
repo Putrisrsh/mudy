@@ -3,6 +3,7 @@ package com.example.myapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
@@ -41,16 +42,20 @@ public class MainActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (validate()) {
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
                     User currentUser = sqliteHelper.Authenticate(new User(null,null,null,null, Email, Password));
                     if (currentUser != null) {
+
+                        SessionManagement sessionManagement = new SessionManagement(MainActivity.this);
+                        sessionManagement.saveSession(currentUser);
+
                         Intent intent = new Intent(MainActivity.this, ChooseGender.class);
                         startActivity(intent);
                         Toast.makeText(MainActivity.this, "Successfully Logged In!", Toast.LENGTH_SHORT).show();
+
                         finish();
                     } else {
                         Toast.makeText(MainActivity.this, "Failed to log in. Please try again.", Toast.LENGTH_SHORT).show();
@@ -58,6 +63,23 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        checkSession();
+    }
+
+    private void checkSession() {
+        SessionManagement sessionManagement = new SessionManagement(MainActivity.this);
+        int userID = sessionManagement.getSession();
+
+        if (userID != -1){
+            Intent intent = new Intent(getBaseContext(), Profile.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
     }
 
     private void createAccount() {

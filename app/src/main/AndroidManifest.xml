@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".characterActivity"></activity>
-        <activity android:name=".randomInterface" />
         <activity android:name=".Timeline" />
         <activity android:name=".Notes" />
         <activity
