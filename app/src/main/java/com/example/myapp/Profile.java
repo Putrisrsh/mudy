@@ -80,6 +80,10 @@ public class Profile extends AppCompatActivity {
             textViewNamaGede.setText(res.getString(2));
             textViewIsiNomer.setText(res.getString(3));
             textViewIsiEmail.setText(res.getString(4));
+
+            ChooseGender g = new ChooseGender();
+
+
         }
 
         Toast.makeText(getBaseContext(), "GENDER NYA " + jk, Toast.LENGTH_SHORT).show();

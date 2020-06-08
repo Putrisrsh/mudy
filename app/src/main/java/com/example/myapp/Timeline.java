@@ -2,15 +2,23 @@ package com.example.myapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.myapp.model.activity;
+import com.example.myapp.model.activityData;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class Timeline extends AppCompatActivity {
 
+    private RecyclerView rvActivity;
+    private ArrayList<activity> list = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +39,10 @@ public class Timeline extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.home:
+                        rvActivity = findViewById(R.id.rv_activity);
+                        rvActivity.setHasFixedSize(true);
+                        list.addAll(activityData.getListData());
+                        showRecyclerCardView();
                         return true;
                     case R.id.about:
                         startActivity(new Intent(getApplicationContext(), Profile.class));
@@ -41,4 +53,11 @@ public class Timeline extends AppCompatActivity {
             }
         });
     }
+    private void showRecyclerCardView(){
+        rvActivity.setLayoutManager(new LinearLayoutManager(this));
+        CardViewTimelineAdapter CardViewTimelineAdapter = new CardViewTimelineAdapter(list);
+        rvActivity.setAdapter(CardViewTimelineAdapter);
+    }
+
+
 }
