@@ -10,7 +10,10 @@ public class characterData {
     };
 
     private static String [] detailCharacter = {
-      "Cekatan,blaaablaa","cepatt bla"
+      "Hewan kecil berbulu halus ini mewakili karakter ramah, penuh dengan ide, tanggap namun mudah panik dan akan menjadi pendiam di tempat asing",
+            "Hewan berjenis karnivora ini mewakili karakter kuat, elegan, berwibawa, aktif namun penuh dengan misteri dan suka menyendiri",
+            "Hewan yang lincah ini mewakili karakter pintar, percaya diri, humoris, namun tidak ingin bersusah-susah dan memilih 'jalan pintas'",
+            "Hewan yang khas dengan leher panjangnya ini mewakili karakter mudah berbaur dengan lingkungan baru, percaya diri, berpenampilan menarik, kreatif, namun memiliki sifat angkuh dan sulit menentukan pilihan karena terlalu dipertimbangkan"
     };
 
     private static int [] imageCharacter = {
