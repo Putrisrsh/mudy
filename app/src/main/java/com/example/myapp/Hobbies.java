@@ -59,11 +59,6 @@ public class Hobbies extends AppCompatActivity {
 
         characters.addAll(characterData.getListData());
 
-
-
-
-
-
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
