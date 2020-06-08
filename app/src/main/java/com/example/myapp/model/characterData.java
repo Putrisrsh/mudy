@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class characterData {
     private static String [] namaCharacter = {
-    "Kelinci","Harimau"
+    "Kelinci","Harimau","Monyet","Jerapah"
     };
 
     private static String [] detailCharacter = {
@@ -14,7 +14,7 @@ public class characterData {
     };
 
     private static int [] imageCharacter = {
-            R.drawable.rabbit,R.drawable.tiger
+            R.drawable.rabbit,R.drawable.tiger,R.drawable.monkey,R.drawable.jerapah
     };
 
     public static ArrayList<character>getListData(){
