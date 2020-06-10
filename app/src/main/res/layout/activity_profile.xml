@@ -103,6 +103,8 @@
             android:layout_marginBottom="300dp"
             android:src="@drawable/rabbit" />
 
+
+
         <TableLayout
             android:layout_marginTop="30dp"
             android:paddingLeft="20dp"
@@ -110,17 +112,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_profil_bottom">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile Information"
+                android:textAlignment="viewStart"
+                android:paddingTop="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <TableRow>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Profile Information"
-                    android:textAlignment="viewStart"
-                    android:paddingTop="30dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </TableRow>
+
 
             <TableRow>
                 <TextView
@@ -136,7 +137,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="viewStart"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:paddingLeft="20dp"/>
             </TableRow>
 
             <TableRow>
@@ -153,7 +155,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="viewStart"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:paddingLeft="20dp"/>
             </TableRow>
 
             <TableRow>
@@ -170,7 +173,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="viewStart"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:paddingLeft="20dp"/>
             </TableRow>
 
             <TableRow>
@@ -187,7 +191,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="viewStart"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:paddingLeft="20dp"
+                    android:text="Female"/>
             </TableRow>
         </TableLayout>
     </RelativeLayout>

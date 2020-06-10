@@ -6,31 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".Timeline">
 
-   <RelativeLayout
-       android:id="@+id/RL_1"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/RL_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-       <ImageView
-           android:layout_width="match_parent"
-           android:layout_height="250dp"
-           android:background="@drawable/shape_timeline"/>
-       <TextView
-           android:id="@+id/sapaan"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:layout_marginLeft="30dp"
-           android:text="haiii"/>
-       <TextView
-           android:layout_below="@+id/sapaan"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="10dp"
-           android:layout_marginLeft="30dp"
-           android:text="quote"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/shape_timeline"/>
+        <TextView
+            android:id="@+id/sapaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="haiii"/>
 
-   </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_quote"
+            android:layout_below="@+id/sapaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="quote"/>
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/what_do"

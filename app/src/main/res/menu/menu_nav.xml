@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/dashboard"
-        android:title="Timeline"
-        android:icon="@drawable/timeline"/>
+        android:title="About us"
+        android:icon="@drawable/ic_mood"/>
     <item
         android:id="@+id/home"
-        android:title="Notes"
+        android:title="Timeline"
         android:icon="@drawable/notes"/>
     <item
         android:id="@+id/about"

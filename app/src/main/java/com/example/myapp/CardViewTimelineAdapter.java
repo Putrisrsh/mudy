@@ -36,10 +36,10 @@ public class CardViewTimelineAdapter extends RecyclerView.Adapter<CardViewTimeli
     @Override
     public void onBindViewHolder(@NonNull CardViewViewHolder holder, int position) {
         activity activity = listActivity.get(position);
-//        Glide.with(holder.itemView.getContext()) //Glid memuat sebuah gambar yg sudah ada di drawable maupun diserver //with untuk memasukan context
-//                .load(activity.()) //load untuk memasukan sumber gambar
-//                .apply(new RequestOptions().override(55, 55)) //melakukan manipulasi gambar
-//                .into(holder.imgPhoto); //memasukan gambar image view
+        Glide.with(holder.itemView.getContext())
+                .load(activity.getImageActivity()) //load untuk memasukan sumber gambar
+                .apply(new RequestOptions().override(55, 55)) //melakukan manipulasi gambar
+                .into(holder.imgPhoto); //memasukan gambar image view
         holder.tvActivity.setText(activity.getAktivitas());
         holder.tvDetail.setText(activity.getDetailActivity());
     }
